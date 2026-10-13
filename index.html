@@ -298,7 +298,7 @@
     <img class="avatar" data-img="photo" src="" alt="Alvith Olivera">
     <h1 class="display" id="heroName">Alvith Olivera</h1>
     <p class="role" id="heroRole">Junior Data Analyst working across Python, SQL and Power BI — turning raw transaction, traffic, sales and health datasets into dashboards people actually use.</p>
-    <p class="status-line"><span class="status-dot"></span>currently building SimCAT dashboards at IMS India</p>
+    <p class="status-line"><span class="status-dot"></span>right now: knee-deep in SimCAT dashboards at IMS India</p>
     <div class="links">
       <a href="https://github.com/alvithh" target="_blank" rel="noopener">github.com/alvithh</a>
       <a href="https://www.linkedin.com/in/alvith-olivera-353996262/" target="_blank" rel="noopener">linkedin.com/in/alvith-olivera</a>
@@ -313,16 +313,16 @@
   </header>
 
   <section class="reveal">
-    <p class="statement">I turn messy spreadsheets into dashboards people trust —<span class="dim"> cleaning the data, finding the pattern underneath, and shipping something that gets opened every Monday, not forgotten in a folder.</span></p>
+    <p class="statement">Most of my job is just cleaning up other people's spreadsheets —<span class="dim"> figuring out why three columns disagree with each other, then building something a manager will actually open on a Monday instead of ignoring.</span></p>
   </section>
 
   <section class="reveal band">
     <h2><span>what i do</span></h2>
     <div class="pill-grid">
-      <div class="do-pill"><p class="t">Data Cleaning &amp; EDA</p><p class="d">Handling missing values, outliers, and messy raw exports before they touch a dashboard.</p></div>
-      <div class="do-pill"><p class="t">Dashboard Design</p><p class="d">Power BI reports built around the KPIs a team actually checks.</p></div>
-      <div class="do-pill"><p class="t">Forecasting Models</p><p class="d">Prophet-based and percentile models for trend and performance prediction.</p></div>
-      <div class="do-pill"><p class="t">Process Automation</p><p class="d">Python/Jupyter pipelines that replace manual Excel rollups.</p></div>
+      <div class="do-pill"><p class="t">Data Cleaning &amp; EDA</p><p class="d">The unglamorous part — chasing down missing values and weird outliers before anyone sees a chart.</p></div>
+      <div class="do-pill"><p class="t">Dashboard Design</p><p class="d">I build Power BI reports around the two or three numbers a team actually checks every week.</p></div>
+      <div class="do-pill"><p class="t">Forecasting Models</p><p class="d">Mostly Prophet, mostly for traffic and performance trends — still learning where it breaks.</p></div>
+      <div class="do-pill"><p class="t">Process Automation</p><p class="d">Writing Python scripts so I stop doing the same Excel rollup by hand every week.</p></div>
     </div>
   </section>
 
@@ -576,7 +576,7 @@ meals_df = <span class="fn">load_meals</span>()
   </section>
 
   <footer class="big reveal">
-    <h2 class="foot-name" id="footName">LET'S TALK DATA.</h2>
+    <h2 class="foot-name" id="footName">got a dataset?</h2>
     <a class="foot-cta" href="mailto:alvitholivera28@gmail.com">send a message</a>
     <div class="foot-bottom">
       <span>github.com/alvithh · linkedin.com/in/alvith-olivera</span>
@@ -744,7 +744,8 @@ meals_df = <span class="fn">load_meals</span>()
               if (!el) return;
               var rect = el.getBoundingClientRect();
               var center = window.innerHeight / 2;
-              var offset = (rect.top + rect.height / 2 - center) * -0.04;
+              var raw = (rect.top + rect.height / 2 - center) * -0.04;
+              var offset = Math.max(-16, Math.min(16, raw));
               el.style.transform = 'translateY(' + offset + 'px)';
             });
           }
